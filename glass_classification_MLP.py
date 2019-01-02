@@ -33,7 +33,7 @@ cv_results = model_selection.cross_val_score(MLPClassifier(activation='relu', al
               nesterovs_momentum=True, power_t=0.5,  random_state=1,
               shuffle=True, solver='lbfgs', tol=0.0001,
               validation_fraction=0.1, verbose=False, warm_start=False), X_train, Y_train, cv=kfold, scoring=scoring)
-msg = "msg %s: %f (%f)" % ('MLPClassifier', cv_results.mean(), cv_results.std())
+msg = "Result %s: %f (%f)" % ('MLPClassifier', cv_results.mean(), cv_results.std())
 print(msg)
 
 

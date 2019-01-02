@@ -25,7 +25,7 @@ scoring = 'accuracy'
 
 kfold = model_selection.KFold(n_splits=10, random_state=seed)
 cv_results = model_selection.cross_val_score(DecisionTreeClassifier(), X_train, Y_train, cv=kfold, scoring=scoring)
-msg = "msg %s: %f (%f)" % ('DecisionTreeClassifier', cv_results.mean(), cv_results.std())
+msg = "Result %s: %f (%f)" % ('DecisionTreeClassifier', cv_results.mean(), cv_results.std())
 print(msg)
 
 

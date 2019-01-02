@@ -31,8 +31,8 @@ X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(
 scoring = 'accuracy'
 
 kfold = model_selection.KFold(n_splits=10, random_state=seed)
-cv_results = model_selection.cross_val_score(KNeighborsClassifier(), X_train, Y_train, cv=kfold, scoring=scoring)
-msg = "msg %s: %f (%f)" % ('KNN', cv_results.mean(), cv_results.std())
+cv_results = model_selection.cross_val_score(KNeighborsClassifier(n_neighbors=1), X_train, Y_train, cv=kfold, scoring=scoring)
+msg = "Result %s: %f (%f)" % ('KNN', cv_results.mean(), cv_results.std())
 print(msg)
 
 
