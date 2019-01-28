@@ -5,8 +5,9 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
+
 # Load dataset
-url = "glass_data/glass.data"
+url = "../glass_data/glass.data"
 names = ['id', 'refractive index', 'Sodium', 'Magnesium', 'Aluminum', 'Silicon', 'Potassium', 'Calcium', 'Barium', 'Iron', 'Type']
 dataset = pandas.read_csv(url, names=names)
 
